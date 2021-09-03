@@ -3,6 +3,7 @@ package co.com.sofka;
 import Ejercicio1.Punto1;
 import Ejercicio3.Punto3;
 import Ejercicio5.Punto5;
+import Ejercicio6.Punto6;
 
 import java.util.Scanner;
 
@@ -89,35 +90,11 @@ public class Test {
                 case "5":
                     System.out.println("ingreso al ejercicio 5");
                     Punto5 w = new Punto5();
-
                     break;
 
                 case "6":
                     System.out.println("ingreso al ejercicio 6");
-                    int c=0;
-                    int i=0;
-                    boolean par=false;
-
-                    for (i = 0; i<100; i++)
-                    {
-                        i=i+1;
-                        if(i%2!=0 && !par)
-                        {
-                            if(i==1){System.out.println("Impares: ");}
-                            c=c+1;
-                            System.out.print(i+" ");
-                            if(c==10){System.out.println("");c=0;}
-                            if(i==99){par=true;i=0;}
-                        }
-
-                        if(par==true && i%2==0)
-                        {
-                            if(i==0){System.out.println("Pares: ");}
-                            c=c+1;
-                            System.out.print(i+" ");
-                            if(c==10){System.out.println("");c=0;}
-                        }
-                    }
+                    Punto6 f = new Punto6();
                     break;
 
                 case "0":
