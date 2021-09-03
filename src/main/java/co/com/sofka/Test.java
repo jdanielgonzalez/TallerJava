@@ -113,6 +113,34 @@ public class Test {
                         }
                     }
                     break;
+
+                case "6":
+                    System.out.println("ingreso al ejercicio 6");
+                    c=0;
+                    par=false;
+
+                    for (i = 0; i<100; i++)
+                    {
+                        i=i+1;
+                        if(i%2!=0 && !par)
+                        {
+                            if(i==1){System.out.println("Impares: ");}
+                            c=c+1;
+                            System.out.print(i+" ");
+                            if(c==10){System.out.println("");c=0;}
+                            if(i==99){par=true;i=0;}
+                        }
+
+                        if(par==true && i%2==0)
+                        {
+                            if(i==0){System.out.println("Pares: ");}
+                            c=c+1;
+                            System.out.print(i+" ");
+                            if(c==10){System.out.println("");c=0;}
+                        }
+                    }
+                    break;
+
                 case "0":
                     System.out.println("Programa finalizado!");
                     op=1;
