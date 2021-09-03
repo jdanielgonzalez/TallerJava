@@ -2,6 +2,7 @@ package co.com.sofka;
 
 import Ejercicio1.Punto1;
 import Ejercicio3.Punto3;
+import Ejercicio4.Punto4;
 import Ejercicio5.Punto5;
 import Ejercicio6.Punto6;
 
@@ -77,13 +78,9 @@ public class Test {
 
                 case "4":
                     System.out.println("ingreso al ejercicio 4");
-                    System.out.print("ingrese el precio de un producto: ");
 
-                    double precio;
-                    precio=Double.parseDouble(entrada.nextLine());
-
-                    precio = precio+precio*21/100;
-                    System.out.println("El precio total con el IVA incluido es: "+precio);
+                    Punto4 valor = new Punto4();
+                    valor.calcularPrecio();
 
                     break;
 
