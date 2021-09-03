@@ -29,7 +29,7 @@ public class Test {
 
         while(op==0)
         {
-            System.out.print("Selecione un ejercicio por favor: ");
+            System.out.print("Selecione un ejercicio por favor o 0 para salir: ");
             ejercicio = entrada.nextLine();
             while(isNumeric(ejercicio)==false)
             {
@@ -74,6 +74,18 @@ public class Test {
                     break;
                 case "4":
                     System.out.println("ingreso al ejercicio 4");
+                    System.out.print("ingrese el precio de un producto: ");
+
+                    double precio;
+                    precio=Double.parseDouble(entrada.nextLine());
+
+                    precio = precio+precio*21/100;
+                    System.out.println("El precio total con el IVA incluido es: "+precio);
+
+                    break;
+                case "0":
+                    System.out.println("Programa finalizado!");
+                    op=1;
                     break;
             }
         }
