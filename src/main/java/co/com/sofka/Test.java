@@ -72,6 +72,7 @@ public class Test {
 
                     System.out.println("el area de un circulo de radio: "+r+" es: "+area);
                     break;
+
                 case "4":
                     System.out.println("ingreso al ejercicio 4");
                     System.out.print("ingrese el precio de un producto: ");
@@ -82,6 +83,35 @@ public class Test {
                     precio = precio+precio*21/100;
                     System.out.println("El precio total con el IVA incluido es: "+precio);
 
+                    break;
+
+                case "5":
+                    System.out.println("ingreso al ejercicio 5");
+                    int i=0;
+                    int c=0;
+                    boolean par=false;
+
+                    while (i<100)
+                    {
+                        i=i+1;
+
+                        if(i%2!=0 && !par)
+                        {
+                            if(i==1){System.out.println("Impares: ");}
+                            c=c+1;
+                            System.out.print(i+" ");
+                            if(c==10){System.out.println("");c=0;}
+                            if(i==99){par=true;i=0;}
+                        }
+
+                        if(par==true && i%2==0)
+                        {
+                            if(i==0){System.out.println("Pares: ");}
+                            c=c+1;
+                            System.out.print(i+" ");
+                            if(c==10){System.out.println("");c=0;}
+                        }
+                    }
                     break;
                 case "0":
                     System.out.println("Programa finalizado!");
