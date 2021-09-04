@@ -107,17 +107,45 @@ public class Test {
 
                 case "8":
                     System.out.println("ingreso al ejercicio 8");
-                    System.out.print("ingrese un dia de la semana: ");
-                    String dia = entrada.nextLine();
-                    dia = dia.toLowerCase();
-
                     String semanalaboral="lunes martes miercoles jueves viernes";
                     String finsemana="sabado domingo";
+                    System.out.print("ingrese un dia de la semana: ");
+                    String dia;
 
-                    if(semanalaboral.contains(dia)){System.out.println("es una dia laboral");}
-                    if(finsemana.contains(dia)){System.out.println("no es un dia laboral");}
-                    if(!semanalaboral.contains(dia) && !finsemana.contains(dia))
-                    { System.out.println("no se ingreso un dia valido");}
+                    do
+                    {
+                        dia = entrada.nextLine();
+                        dia = dia.toLowerCase();
+                        if (semanalaboral.contains(dia)) {
+                            System.out.println("es una dia laboral");
+                        }
+                        if (finsemana.contains(dia)) {
+                            System.out.println("no es un dia laboral");
+                        }
+                        if (!semanalaboral.contains(dia) && !finsemana.contains(dia))
+                            {
+                                System.out.println("no se ingreso un dia valido");
+                                System.out.print("ingrese un dia de la semana: ");
+                            }
+                    }
+                    while(!semanalaboral.contains(dia) && !finsemana.contains(dia));
+
+                    break;
+
+                case "9":
+                    System.out.println("ingreso al ejercicio 9");
+                    String texto = "La sonrisa sera la mejor arma contra la tristeza";
+                    System.out.println(texto);
+                    System.out.println("cambio de todas letras a por e");
+                    texto=texto.replaceAll("a","e");
+                    System.out.println(texto);
+
+                    System.out.print("ingrese lo que quiera concatenar al texto anterior: ");
+                    String t = entrada.nextLine();
+                    texto=texto.concat(" ");
+                    texto=texto.concat(t);
+                    System.out.println(texto);
+
                     break;
 
                 case "0":
