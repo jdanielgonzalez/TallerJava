@@ -92,6 +92,18 @@ public class Test {
                     Punto6 f = new Punto6();
                     break;
 
+                case "7":
+                    System.out.println("ingreso al ejercicio 7");
+                    double n;
+                    do
+                    {
+                        System.out.print("ingrese un numero: ");
+                        n = Double.parseDouble(entrada.nextLine());
+                        if(n>=0){System.out.println("el numero ingresado es "+n);}
+                    }
+                    while (n<0);
+                    break;
+
                 case "0":
                     System.out.println("Programa finalizado!");
                     op=1;
