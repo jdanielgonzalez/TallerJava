@@ -6,6 +6,7 @@ import Ejercicio4.Punto4;
 import Ejercicio5.Punto5;
 import Ejercicio6.Punto6;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Test {
@@ -102,6 +103,21 @@ public class Test {
                         if(n>=0){System.out.println("el numero ingresado es "+n);}
                     }
                     while (n<0);
+                    break;
+
+                case "8":
+                    System.out.println("ingreso al ejercicio 8");
+                    System.out.print("ingrese un dia de la semana: ");
+                    String dia = entrada.nextLine();
+                    dia = dia.toLowerCase();
+
+                    String semanalaboral="lunes martes miercoles jueves viernes";
+                    String finsemana="sabado domingo";
+
+                    if(semanalaboral.contains(dia)){System.out.println("es una dia laboral");}
+                    if(finsemana.contains(dia)){System.out.println("no es un dia laboral");}
+                    if(!semanalaboral.contains(dia) && !finsemana.contains(dia))
+                    { System.out.println("no se ingreso un dia valido");}
                     break;
 
                 case "0":
