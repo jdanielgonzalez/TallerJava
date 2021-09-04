@@ -5,6 +5,7 @@ import Ejercicio3.Punto3;
 import Ejercicio4.Punto4;
 import Ejercicio5.Punto5;
 import Ejercicio6.Punto6;
+import Ejercicio11.Punto11;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -155,6 +156,12 @@ public class Test {
                     t=t.replaceAll(" ","");
                     System.out.println("texto sin espacios: "+t);
                     break;
+
+                case "11":
+                    System.out.println("ingreso al ejecicio 11");
+                    Punto11 p11 =new Punto11();
+                    break;
+
 
                 case "0":
                     System.out.println("Programa finalizado!");
