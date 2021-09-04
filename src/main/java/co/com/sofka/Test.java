@@ -148,6 +148,14 @@ public class Test {
 
                     break;
 
+                case "10":
+                    System.out.println("ingreso al ejercicio 10");
+                    System.out.print("ingrese un texto: ");
+                    t = entrada.nextLine();
+                    t=t.replaceAll(" ","");
+                    System.out.println("texto sin espacios: "+t);
+                    break;
+
                 case "0":
                     System.out.println("Programa finalizado!");
                     op=1;
