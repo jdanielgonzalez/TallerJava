@@ -9,6 +9,7 @@ import Ejercicio11.Punto11;
 
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Test {
     //funcion para saber si se ingresa algo diferente a un numero.
@@ -162,6 +163,9 @@ public class Test {
                     Punto11 p11 =new Punto11();
                     break;
 
+                case "12":
+                    System.out.println("ingreso al punto 12");
+                    break;
 
                 case "0":
                     System.out.println("Programa finalizado!");
