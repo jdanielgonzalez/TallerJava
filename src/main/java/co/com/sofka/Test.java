@@ -7,6 +7,8 @@ import Ejercicio5.Punto5;
 import Ejercicio6.Punto6;
 import Ejercicio11.Punto11;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -165,6 +167,13 @@ public class Test {
 
                 case "12":
                     System.out.println("ingreso al punto 12");
+                    break;
+
+                case "13":
+                    System.out.println("ingreso al punto 13");
+                    DateTimeFormatter fecha = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                    System.out.println(fecha.format(LocalDateTime.now()));
+
                     break;
 
                 case "0":
