@@ -7,6 +7,7 @@ import Ejercicio5.Punto5;
 import Ejercicio6.Punto6;
 import Ejercicio11.Punto11;
 import Ejercicio14.Punto14;
+import Ejercicio15.Punto15;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -179,6 +180,11 @@ public class Test {
                 case "14":
                     System.out.println("ingreso al ejercicio 14");
                     Punto14 p14 = new Punto14();
+                    break;
+
+                case "15":
+                    System.out.println("ingro al ejercicio 15");
+                    Punto15 p15 = new Punto15();
                     break;
                 case "0":
                     System.out.println("Programa finalizado!");
