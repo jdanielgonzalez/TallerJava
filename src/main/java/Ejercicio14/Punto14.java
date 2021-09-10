@@ -8,6 +8,7 @@ public class Punto14
     {
         int n;
         Scanner entrada = new Scanner(System.in);
+
         do
         {
             System.out.print("ingrese un numero: ");
