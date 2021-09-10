@@ -1,6 +1,7 @@
 package co.com.sofka;
 
 import Ejercicio1.Punto1;
+import Ejercicio17.Lavadora;
 import Ejercicio3.Punto3;
 import Ejercicio4.Punto4;
 import Ejercicio5.Punto5;
@@ -9,6 +10,7 @@ import Ejercicio11.Punto11;
 import Ejercicio14.Punto14;
 import Ejercicio15.Punto15;
 import Ejercicio16.Persona;
+import Ejercicio17.Electrodomestico;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -258,6 +260,16 @@ public class Test {
                         System.out.println(lista.get(i).toString());
                     }
                     break;
+
+
+                case "17":
+                    System.out.println("ingreso al punto 17");
+                    Electrodomestico lg1 = new Electrodomestico();
+                    Electrodomestico lg2 = new Electrodomestico(150,20);
+                    Electrodomestico lg3 = new Electrodomestico(125, "azul",'b',30);
+
+                    Lavadora lava1 = new Lavadora(700,40);
+
 
                 case "0":
                     System.out.println("Programa finalizado!");
