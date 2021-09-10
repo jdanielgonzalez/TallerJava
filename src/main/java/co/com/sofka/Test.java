@@ -1,6 +1,7 @@
 package co.com.sofka;
 
 import Ejercicio1.Punto1;
+import Ejercicio17.Ejecutable;
 import Ejercicio17.Lavadora;
 import Ejercicio3.Punto3;
 import Ejercicio4.Punto4;
@@ -11,6 +12,7 @@ import Ejercicio14.Punto14;
 import Ejercicio15.Punto15;
 import Ejercicio16.Persona;
 import Ejercicio17.Electrodomestico;
+import Ejercicio18.Ejecutable18;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -62,25 +64,57 @@ public class Test {
                     break;
 
                 case "2":
-                    int a;
-                    int b;
+                    String a;
+                    String b;
+                    int n1;
+                    int n2;
                     System.out.println("ingreso al ejercicio 2");
                     System.out.print("ingrese el primer numero:");
-                    a=Integer.parseInt(entrada.nextLine());
+                    a=entrada.nextLine();
+                    while (!isNumeric(a))
+                    {
+                        System.out.println("numero ingresado no valido!");
+                        System.out.print("ingrese el primer numero:");
+                        a=entrada.nextLine();
+                    }
                     System.out.print("ingrese el segundo numero:");
-                    b=Integer.parseInt(entrada.nextLine());
+                    b=entrada.nextLine();
+                    while (!isNumeric(b))
+                    {
+                        System.out.println("numero ingresado no valido!");
+                        System.out.print("ingrese el segundo numero:");
+                        b=entrada.nextLine();
+                    }
+                    n1=Integer.parseInt(a);
+                    n2=Integer.parseInt(b);
                     Punto1 ejm= new Punto1();
-                    ejm.compararNumeros(a,b);
+                    ejm.compararNumeros(n1,n2);
 
                     break;
                 case "3":
                     System.out.println("ingreso al ejercicio 3");
                     System.out.print("ingrese el radio: ");
 
+                    String rs;
                     double r;
                     double area;
 
-                    r = Double.parseDouble(entrada.nextLine());
+                    rs = entrada.nextLine();
+                    while (!isNumeric(rs))
+                    {
+                        System.out.println("radio no valido!");
+                        System.out.print("ingrese el radio:");
+                        rs=entrada.nextLine();
+                        if(isNumeric(rs))
+                        {
+                            r=Integer.parseInt(rs);
+                            if(r<0)
+                            System.out.println("radio no valido!");
+                            System.out.print("ingrese el radio:");
+                            rs=entrada.nextLine();
+                        }
+                    }
+                    r=Integer.parseInt(rs);
                     Punto3 circulo = new Punto3(r);
                     area=circulo.calcularArea();
 
@@ -264,12 +298,12 @@ public class Test {
 
                 case "17":
                     System.out.println("ingreso al punto 17");
-                    Electrodomestico lg1 = new Electrodomestico();
-                    Electrodomestico lg2 = new Electrodomestico(150,20);
-                    Electrodomestico lg3 = new Electrodomestico(125, "azul",'b',30);
+                    Ejecutable correr17 = new Ejecutable();
 
-                    Lavadora lava1 = new Lavadora(700,40);
-
+                case "18":
+                    System.out.println("ingreso al punto 18");
+                    Ejecutable18 correr18 = new Ejecutable18();
+                    correr18.Ejecutar();
 
                 case "0":
                     System.out.println("Programa finalizado!");
