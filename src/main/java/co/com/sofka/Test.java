@@ -8,12 +8,14 @@ import Ejercicio6.Punto6;
 import Ejercicio11.Punto11;
 import Ejercicio14.Punto14;
 import Ejercicio15.Punto15;
+import Ejercicio16.Persona;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Test {
     //funcion para saber si se ingresa algo diferente a un numero.
@@ -179,13 +181,84 @@ public class Test {
 
                 case "14":
                     System.out.println("ingreso al ejercicio 14");
-                    Punto14 p14 = new Punto14();
+                    Punto14 punto14 = new Punto14();
                     break;
 
                 case "15":
                     System.out.println("ingro al ejercicio 15");
                     Punto15 p15 = new Punto15();
                     break;
+
+                case "16":
+                    System.out.println("ingreso al ejercicio 16");
+                    //solicito los datos
+                    System.out.println("ingrese el nombre: ");
+                    String nombre=entrada.nextLine();
+                    System.out.println("ingrese la edad: ");
+                    int edad=Integer.parseInt(entrada.nextLine());
+                    System.out.println("ingrese su sexo (H o M): ");
+                    String sexo=entrada.nextLine();
+                    System.out.println("ingrese su peso en kg: ");
+                    double peso = Double.parseDouble(entrada.nextLine());
+                    System.out.println("ingrese su altura en centrimetros: ");
+                    double altura = Double.parseDouble(entrada.nextLine());
+
+                    //creo las tres personas
+                    Persona persona1 = new Persona(nombre,edad,sexo, peso,altura);
+
+                    Persona persona2 = new Persona(nombre,edad,sexo);
+                    persona2.setPeso(55);
+                    persona2.setAltura(190);
+
+                    Persona defecto = new Persona();
+                    defecto.setNombre("Defecto");
+                    defecto.setEdad(40);
+                    defecto.setSexo("H");
+                    defecto.setPeso(70);
+                    defecto.setAltura(170);
+
+                    //creo una lista de la clase perosnas
+                    ArrayList<Persona> lista = new ArrayList();
+                    //agrego a las 3 personas a la lista
+                    lista.add(persona1);
+                    lista.add(persona2);
+                    lista.add(defecto);
+
+                    //muestro como la persona esta con su peso y si es mayor de edad
+                    for(int i=0;i<3;i++)
+                    {
+                        if(lista.get(i).CalcularIMC()==-1)
+                        {
+                            System.out.println(lista.get(i).getNombre()+" esta por debajo de su peso ideal");
+                        }
+
+                        else if(lista.get(i).CalcularIMC()==0)
+                        {
+                            System.out.println(lista.get(i).getNombre()+" esta en su peso ideal");
+                        }
+
+                        else if(lista.get(i).CalcularIMC()==1)
+                        {
+                            System.out.println(lista.get(i).getNombre()+" esta con sobre peso");
+                        }
+                        if(lista.get(i).esMAyorDeEdad()==true)
+                        {
+                            System.out.println(lista.get(i).getNombre()+" es mayor de edad");
+                        }
+
+                        if(lista.get(i).esMAyorDeEdad()==false)
+                        {
+                            System.out.println(lista.get(i).getNombre()+" es menor de edad");
+                        }
+                        System.out.println("");
+                    }
+                    //muestro todos los datos de las personas
+                    for(int i=0;i<3;i++)
+                    {
+                        System.out.println(lista.get(i).toString());
+                    }
+                    break;
+
                 case "0":
                     System.out.println("Programa finalizado!");
                     op=1;
