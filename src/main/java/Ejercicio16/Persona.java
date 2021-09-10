@@ -2,19 +2,20 @@ package Ejercicio16;
 
 public class Persona {
 
-    String nombre= "";
-    int edad=0;
-    String DNI="";
-    String sexo="H";
-    double peso=0;
-    double altura=0;
+    private String nombre;
+    private int edad;
+    private String DNI;
+    private static final String sexo_base="H";
+    private String sexo;
+    private double peso;
+    private double altura;
 
     public Persona()
     {
         String nombre= "";
         int edad=0;
         this.DNI=this.generaDNI();
-        final String sexo="H";
+        this.sexo=sexo_base;
         double peso=0;
         double altura=0;
     }
@@ -45,11 +46,11 @@ public class Persona {
         double imc=0;
         imc=this.peso/((this.altura/100)*(this.altura/100));
 
-        if(imc<20){i=-1;}
+        if(imc<20)i=-1;
 
-        else if(imc<= 25 && imc>=20){i=0;}
+        else if(imc<= 25 && imc>=20)i=0;
 
-        else if(imc>25){i=1;}
+        else if(imc>25)i=1;
 
         return i;
     }
@@ -57,23 +58,21 @@ public class Persona {
     public boolean esMAyorDeEdad()
     {
         boolean isMayor=false;
-        if(this.edad>=18)
-        {
-            isMayor=true;
-        }
-        else if(this.edad<18)
-        {
-            isMayor=false;
-        }
+        if(this.edad>=18) isMayor=true;
+        else if(this.edad<18)isMayor=false;
+
         return isMayor;
     }
 
-    public String toString()
-    {
-        String s="";
-        s=s.concat("NOMBRE: "+this.nombre+" Edad: "+Integer.toString(this.edad)+" Sexo: "+this.sexo+" DNI: ");
-        s=s.concat(this.DNI+" Peso: "+Double.toString(this.peso)+" Altura: "+Double.toString(this.altura));
-        return s;
+    @Override
+    public String toString() {
+        return
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", DNI='" + DNI + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", peso=" + peso +
+                ", altura=" + altura ;
     }
 
     public String generaDNI()
