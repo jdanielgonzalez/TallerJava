@@ -8,9 +8,8 @@ se creo un package para cada punto y un package especial para la ejecución que 
 
 en el package se creo una clase llamada test donde se ejecuta todos los puntos.
 
-me falto terminar el 17.
+Para realizar la corrrecta ejecucion es necesario entrar al package co.com.sofka y correr la clase Test
 
-y el 18 no lo pude realizar.
 
 ----------------------------------------
 VERSION: Java 11 Amazon coretto 11.0.12
